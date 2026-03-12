@@ -2,7 +2,7 @@
 # 💻 Tech Stack:
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white) ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-
+---
 
 # 🧪 Selenium Test Automation Project:
 
@@ -21,7 +21,7 @@ The test structure follows the **Page Object Model (POM)** pattern.
 - Maven  
 - Page Object Model (POM)  
 - IntelliJ IDEA  
-- ChromeDriver  
+
 
 ---
 
@@ -151,4 +151,55 @@ Automated scenarios in this project include:
 The automated tests require access to the target application and valid user credentials.
 
 Example executions of the tests are available in the attached recordings.
+
+---
+
+## 📝 Example Manual Test Scenarios
+
+Below are examples of manual test scenarios that correspond to automated tests in this project.
+
+### Scenario: Change order of products in a package
+
+**Steps**
+
+1. Open the **Packages** section in the admin panel
+2. Select a package from the list
+3. Go to the **Package Contents** tab
+4. Drag one product below another
+5. Save the changes
+
+**Expected result**
+
+The order of products in the package should be updated.
+
+---
+
+### Scenario: Create a physical product
+
+**Steps**
+
+1. Open the **Physical Products** section
+2. Click **Add Physical Product**
+3. Enter product name and price
+4. Click **Create**
+
+**Expected result**
+
+The new product should appear in the products table.
+
+---
+
+### Scenario: Add a variant to a course
+
+**Steps**
+
+1. Open the **Courses** section
+2. Create a new course
+3. Click **Add Variant**
+4. Enter variant name and price
+5. Save the variant
+
+**Expected result**
+
+The variant should be added to the course.
 
