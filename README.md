@@ -1,48 +1,48 @@
 
-# 💻 Tech Stack:
+## 🧰 Tech stack
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white) ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 ---
 
-# 🧪 Selenium Test Automation Project:
+# 🔍 UI test automation project
 
-Automated UI tests for a web application written in **Java** using **Selenium WebDriver** and **TestNG**.
+This repository contains UI automation tests written in **Java** using **Selenium WebDriver** and **TestNG**.
 
-The project automates selected user scenarios such as product management, package editing and drag-and-drop interactions.  
-The test structure follows the **Page Object Model (POM)** pattern.
+The tests cover several user flows in the application, including product management, course configuration and editing package contents.
+
+The project uses the **Page Object Model (POM)** pattern to keep test logic separated from page interactions.
 
 ---
 
-## 🛠 Technologies
+## 🧩 Tools and libraries
 
 - Java  
 - Selenium WebDriver  
 - TestNG  
 - Maven  
-- Page Object Model (POM)  
+- Page Object Model  
 - IntelliJ IDEA  
-
+- ChromeDriver  
 
 ---
 
-## ✨ Features
+## 🔎 What is tested
 
-This automation suite verifies the following functionalities:
+The automated tests cover scenarios such as:
 
-- creating a **physical product**
+- creating a physical product
 - editing product configuration
-- enabling product **sales visibility**
-- viewing product details
-- adding a product to **cart**
-- managing **packages**
-- changing **product order inside a package**
+- enabling product visibility
+- opening product details
+- adding a product to the cart
+- managing packages
+- changing the order of products in a package
 - removing products from packages
-- verifying **drag & drop functionality**
-- UI verification using assertions
+- verifying drag & drop interactions
 
 ---
 
-## 📂 Project Structure
+## 🗂 Project structure
 
 ```
 src
@@ -72,7 +72,7 @@ src
          │   ├─ PhysicalProductsPopupPage
          │   ├─ ProductDetailsPage
          │   ├─ ReportsPage
-         │   ├─ .....
+         │   └─ ...
          │
          └─ tests
              ├─ AdminMenuTest
@@ -84,40 +84,39 @@ src
 
 ---
 
-## 🧱 Test Architecture
+## 🏗 Test structure
 
-The project follows the **Page Object Model (POM)** design pattern.
+Tests are organized using the **Page Object Model**.
 
-Each page of the application is represented by a separate class responsible for interacting with UI elements.  
-This approach separates test logic from page interactions and helps keep the tests readable and maintainable.
+Each page of the application has its own class that contains the elements and actions related to that page.  
+This helps keep tests readable and reduces duplicated code.
 
 Example:
 
 ```
-AdminMenuPage      → navigation inside admin panel
+AdminMenuPage      → navigation in the admin panel
 PackagesPage       → package list
 PackagesEditPage   → editing package contents
 ```
 
 ---
 
-## 🧪 Example Automated Scenario
+## 🧪 Example automated scenario
 
-One of the automated tests verifies **changing the order of products inside a package**.
+One of the tests verifies changing the order of products inside a package.
 
-Steps performed by the test:
+Test flow:
 
-1. Open the **Packages** section in admin panel  
-2. Select a package from the list  
-3. Open package editing view  
-4. Navigate to **Package Contents** tab  
-5. Perform **drag and drop** on products  
-6. Save changes  
-7. Verify that product order has changed  
-8. Remove a product from the package  
-9. Confirm the new number of products  
+1. Open the **Packages** section in the admin panel  
+2. Select a package  
+3. Open the **Package Contents** tab  
+4. Change the order of two products using drag & drop  
+5. Save changes  
+6. Verify the order update  
+7. Remove a product from the package  
+8. Verify the new number of products  
 
-Example test fragment:
+Example fragment from the test:
 
 ```java
 editPage.dragProduct(0, 1);
@@ -131,75 +130,68 @@ Assert.assertTrue(orderChanged, "Order did not change after drag and save");
 
 ---
 
-## 📚 Test Scenarios
+## 📋 Test scenarios
 
-Automated scenarios in this project include:
+Examples of automated scenarios included in the project:
 
 - creating a physical product
 - enabling product visibility in the catalog
 - opening product details
 - adding a product to the cart
 - editing package contents
-- changing the order of products in a package (drag and drop)
+- changing the order of products in a package
 - removing a product from a package
 
+---
+
+## 📎 Notes
+
+Running the tests requires access to the target application and valid user credentials.
+
+Example test executions are shown in the attached recordings.
 
 ---
 
-## 📝 Notes
+## 🧾 Example manual test scenarios
 
-The automated tests require access to the target application and valid user credentials.
+### Change order of products in a package
 
-Example executions of the tests are available in the attached recordings.
+Steps:
 
----
+1. Open the **Packages** section in the admin panel  
+2. Select a package  
+3. Go to the **Package Contents** tab  
+4. Drag one product below another  
+5. Save changes  
 
-## 📝 Example Manual Test Scenarios
-
-Below are examples of manual test scenarios that correspond to automated tests in this project.
-
-### Scenario: Change order of products in a package
-
-**Steps**
-
-1. Open the **Packages** section in the admin panel
-2. Select a package from the list
-3. Go to the **Package Contents** tab
-4. Drag one product below another
-5. Save the changes
-
-**Expected result**
-
-The order of products in the package should be updated.
+Expected result  
+The order of products should be updated.
 
 ---
 
-### Scenario: Create a physical product
+### Create a physical product
 
-**Steps**
+Steps:
 
-1. Open the **Physical Products** section
-2. Click **Add Physical Product**
-3. Enter product name and price
+1. Open the **Physical Products** section  
+2. Click **Add Physical Product**  
+3. Enter product name and price  
 4. Click **Create**
 
-**Expected result**
-
-The new product should appear in the products table.
+Expected result  
+The product appears in the product table.
 
 ---
 
-### Scenario: Add a variant to a course
+### Add a variant to a course
 
-**Steps**
+Steps:
 
-1. Open the **Courses** section
-2. Create a new course
-3. Click **Add Variant**
-4. Enter variant name and price
-5. Save the variant
+1. Open the **Courses** section  
+2. Create a new course  
+3. Click **Add Variant**  
+4. Enter variant name and price  
+5. Save the variant  
 
-**Expected result**
-
-The variant should be added to the course.
-
+Expected result  
+The variant is added to the course.
